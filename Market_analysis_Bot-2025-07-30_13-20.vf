@@ -1,0 +1,4177 @@
+{
+  "version": {
+    "_version": 13.03,
+    "autoSaveFromRestore": false,
+    "canvasTemplates": [],
+    "components": [],
+    "creatorID": 1661508,
+    "manualSave": false,
+    "model": {},
+    "name": "Initial Version",
+    "platformData": {
+      "slots": [],
+      "intents": [
+        {
+          "key": "None",
+          "name": "None",
+          "slots": [],
+          "inputs": [],
+          "noteID": null
+        },
+        {
+          "key": "6797c2110cfd6c00ccbedd9f",
+          "name": "No",
+          "slots": [],
+          "inputs": [
+            {
+              "text": "I'm good",
+              "slots": []
+            },
+            {
+              "text": "Nope",
+              "slots": []
+            },
+            {
+              "text": "I think I'm good thanks",
+              "slots": []
+            },
+            {
+              "text": "Definitely not",
+              "slots": []
+            },
+            {
+              "text": "Nope",
+              "slots": []
+            },
+            {
+              "text": "Under no circumstances",
+              "slots": []
+            },
+            {
+              "text": "Not at all",
+              "slots": []
+            },
+            {
+              "text": "Nope, not at all",
+              "slots": []
+            },
+            {
+              "text": "No way",
+              "slots": []
+            },
+            {
+              "text": "By no means",
+              "slots": []
+            },
+            {
+              "text": "Not in the slightest",
+              "slots": []
+            },
+            {
+              "text": "No chance",
+              "slots": []
+            },
+            {
+              "text": "Absolutely not",
+              "slots": []
+            },
+            {
+              "text": "Not at all",
+              "slots": []
+            },
+            {
+              "text": "Negative",
+              "slots": []
+            },
+            {
+              "text": "Sorry, no",
+              "slots": []
+            },
+            {
+              "text": "Definitely not",
+              "slots": []
+            },
+            {
+              "text": "That's wrong",
+              "slots": []
+            },
+            {
+              "text": "Incorrect",
+              "slots": []
+            },
+            {
+              "text": "Nope",
+              "slots": []
+            },
+            {
+              "text": "No",
+              "slots": []
+            }
+          ],
+          "noteID": "b768k0aq8",
+          "description": "Trigger this intent then the user responds negatively"
+        },
+        {
+          "key": "6797c2660cfd6c00ccbeddd1",
+          "name": "Yes",
+          "slots": [],
+          "inputs": [
+            {
+              "text": "Definitely",
+              "slots": []
+            },
+            {
+              "text": "Indeed",
+              "slots": []
+            },
+            {
+              "text": "Of course",
+              "slots": []
+            },
+            {
+              "text": "Certainly",
+              "slots": []
+            },
+            {
+              "text": "Without question",
+              "slots": []
+            },
+            {
+              "text": "Sure",
+              "slots": []
+            },
+            {
+              "text": "Definitely",
+              "slots": []
+            },
+            {
+              "text": "You bet",
+              "slots": []
+            },
+            {
+              "text": "Without a doubt",
+              "slots": []
+            },
+            {
+              "text": "By all means",
+              "slots": []
+            },
+            {
+              "text": "Agreed",
+              "slots": []
+            },
+            {
+              "text": "Absolutely",
+              "slots": []
+            },
+            {
+              "text": "That's correct",
+              "slots": []
+            },
+            {
+              "text": "Indeed",
+              "slots": []
+            },
+            {
+              "text": "Affirmative",
+              "slots": []
+            },
+            {
+              "text": "You are right",
+              "slots": []
+            },
+            {
+              "text": "Correct",
+              "slots": []
+            },
+            {
+              "text": "Yep",
+              "slots": []
+            },
+            {
+              "text": "Yes",
+              "slots": []
+            }
+          ],
+          "noteID": "b768l0afw",
+          "description": "Trigger this intent when the user responds positively."
+        }
+      ],
+      "settings": {
+        "restart": true,
+        "repeat": 100,
+        "locales": [
+          "en-US"
+        ],
+        "globalNoMatch": {
+          "type": "static",
+          "prompt": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Sorry, I didn’t get that. Please try again."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "messageDelay": {
+          "durationMilliseconds": 500
+        },
+        "defaultVoice": "elevenlabs:eleven_turbo_v2_5:FGY2WhTYpPnrIDTdsKH5",
+        "deepgramASR": {
+          "silenceWaitMS": 10,
+          "punctuationWaitMS": 1000,
+          "partialWaitMS": 1500,
+          "interruptionWaitWords": 2,
+          "audioCue": null
+        }
+      },
+      "publishing": {
+        "avatar": "https://cdn.voiceflow.com/assets/logo.png",
+        "color": "#397DFF",
+        "description": "Hi, how can I help you today?",
+        "feedback": false,
+        "image": "https://cdn.voiceflow.com/assets/logo.png",
+        "persistence": "localStorage",
+        "position": "right",
+        "spacing": {
+          "side": 24,
+          "bottom": 24
+        },
+        "title": "Your AI agent",
+        "watermark": true,
+        "audioInterface": true
+      },
+      "platform": "webchat"
+    },
+    "programResources": {
+      "agents": {},
+      "prompts": {
+        "684dbd9e5757a2a784d67765": {
+          "settings": {
+            "model": "gpt-4o-mini",
+            "useStructuredOutput": false,
+            "maxTokens": 500,
+            "temperature": 0.3
+          },
+          "system": "You are a real estate market analyst. Your job is to provide a short, clear summary of the current market trends for a given area.\r\n\r\nYou will generate a 3–5 sentence market report based on the user's provided location and optional filters like property type, budget, or timeframe. If the area is popular, mention demand trends. If prices are rising or falling, include that.\r\n\r\nIf there's not enough detail, still generate a general overview using data from similar areas.\r\n\r\nBe professional, objective, and helpful.",
+          "messages": [
+            {
+              "role": "user",
+              "content": "{vf_memory}"
+            },
+            {
+              "role": "user",
+              "content": "Generate a real estate market analysis report for the following input:\r\n\r\nLocation: {location}  \r\nProperty Type: {property_type}  \r\nBudget: {budget}  \r\nTimeframe: {timeframe}"
+            }
+          ]
+        }
+      },
+      "apiTools": {},
+      "messages": {
+        "684dbbf02d4ddb7e92584dbe": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "👋 Market Analysis Bot can help you get a real estate market analysis report for your desired area. Are you ready?\r\n"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "684dbcb32d4ddb7e92584df5": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Thank You for contacting. Stay Happy"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "684dbcdd2d4ddb7e92584e0a": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Please enter the area or city you want a market report for.\r"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "684dbd122d4ddb7e92584e53": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "What type of property are you interested in?"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "684dbd452d4ddb7e92584e6d": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "What’s your budget range?"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "684dbd692d4ddb7e92584e87": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "When are you planning to buy or invest?"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "684dbe792d4ddb7e92584f09": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Here’s your personalized market report:\r\n\r"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "684df676fe109ae814e80bf9": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Would you like to schedule a quick call with our agent to discuss this market?\r\n"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              },
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Do you want to set up a brief chat with our representative to talk about this market?"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              },
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Are you interested in arranging a short call with our agent to go over this market?"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              },
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Would you be open to scheduling a quick call with our representative to discuss this market?"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "684df6c3fe109ae814e80c23": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Thank You for contactig. If you need further assistance, tap sure to continue."
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "684df794fe109ae814e80c47": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "what would you like? Choose."
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "684df826fe109ae814e80c5c": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Setup face to face meeting time by yourself."
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "684df845fe109ae814e80c66": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Setup quick call time by yourself."
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "684dfaa1fe109ae814e80cbe": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "<iframe width=\"100%\" height=\"500\" frameborder=\"0\" style=\"border.0\" title=\"Select a Date &amp; Time - Calendly\" src = \""
+                        },
+                        {
+                          "text": "{URL}"
+                        },
+                        {
+                          "text": "  \" llowfullscreen></iframe>"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "684dfb85fe109ae814e80cf5": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "<iframe width=\"100%\" height=\"500\" frameborder=\"0\" style=\"border.0\" title=\"Select a Date &amp; Time - Calendly\" src = \""
+                        },
+                        {
+                          "text": "{URL}"
+                        },
+                        {
+                          "text": "  \" llowfullscreen></iframe>"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "684dfcd8fe109ae814e80d7c": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Now, as you have booked time for face to face meeting, wish you best of luck for the meeting."
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "684dfd29fe109ae814e80d90": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Now, as you have booked time for a quick call, wish you best of luck for the call."
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "684dfd76fe109ae814e80daa": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "If you need more assistance, you can tap on Sure button to continue otherwise, tap on No Thanks button to end the chat session."
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "684dfdc6fe109ae814e80db6": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "If you need more assistance, you can tap on Sure button to continue otherwise, tap on No Thanks button to end the chat session."
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        }
+      },
+      "integrationTools": {}
+    },
+    "prototype": {
+      "type": "chat",
+      "data": {
+        "name": "Market analysis Bot",
+        "locales": [
+          "en-US"
+        ]
+      },
+      "model": {
+        "intents": [],
+        "slots": []
+      },
+      "context": {
+        "stack": [
+          {
+            "diagramID": "64dbb6696a8fab0013dba194",
+            "storage": {},
+            "variables": {}
+          }
+        ],
+        "variables": {}
+      },
+      "surveyorContext": {
+        "nonDraftResponsesMap": {},
+        "responseMessagesByDiscriminatorIDMap": {},
+        "responseDiscriminatorsByResponseIDMap": {},
+        "functionDefinitions": {},
+        "referencedResponseIDs": [
+          "684dbbf02d4ddb7e92584dbe",
+          "684dbcb32d4ddb7e92584df5",
+          "684dbcdd2d4ddb7e92584e0a",
+          "684dbd122d4ddb7e92584e53",
+          "684dbd452d4ddb7e92584e6d",
+          "684dbd692d4ddb7e92584e87",
+          "684dbe792d4ddb7e92584f09",
+          "684df676fe109ae814e80bf9",
+          "684df6c3fe109ae814e80c23",
+          "684df794fe109ae814e80c47",
+          "684df826fe109ae814e80c5c",
+          "684df845fe109ae814e80c66",
+          "684dfaa1fe109ae814e80cbe",
+          "684dfb85fe109ae814e80cf5",
+          "684dfcd8fe109ae814e80d7c",
+          "684dfd29fe109ae814e80d90",
+          "684dfd76fe109ae814e80daa",
+          "684dfdc6fe109ae814e80db6"
+        ],
+        "referencedAgentsIDs": [],
+        "referencedAPIToolIDs": [],
+        "referencedIntegrationToolIDs": [],
+        "slotsMap": {},
+        "platform": "webchat",
+        "products": {},
+        "extraSlots": [],
+        "interfaces": [],
+        "permissions": [],
+        "projectType": "chat",
+        "extraIntents": [],
+        "usedEventsSet": [],
+        "usedIntentsSet": [],
+        "goToIntentsSet": [],
+        "entitiesMap": {},
+        "variableMap": {},
+        "intentsMap": {},
+        "requiredEntitiesMap": {},
+        "eventsMap": {},
+        "cmsVariables": {
+          "sessions": {
+            "isSystem": true,
+            "description": "The number of times a particular user has opened the app.",
+            "defaultValue": null
+          },
+          "user_id": {
+            "isSystem": true,
+            "description": "The user's unique ID.",
+            "defaultValue": null
+          },
+          "timestamp": {
+            "isSystem": true,
+            "description": "UNIX timestamp (number of seconds since January 1st, 1970 at UTC).",
+            "defaultValue": null
+          },
+          "platform": {
+            "isSystem": true,
+            "description": "The platform your agent is running on (e.g. \"voiceflow\").",
+            "defaultValue": null
+          },
+          "locale": {
+            "isSystem": true,
+            "description": "The locale of the user (eg. en-US, en-CA, it-IT, fr-FR, ...).",
+            "defaultValue": null
+          },
+          "intent_confidence": {
+            "isSystem": true,
+            "description": "The confidence interval (measured as a value from 0 to 100) for the most recently matched intent.",
+            "defaultValue": null
+          },
+          "last_response": {
+            "isSystem": true,
+            "description": "The agent's last response (text/speak) in a string.",
+            "defaultValue": null
+          },
+          "last_event": {
+            "isSystem": true,
+            "description": "The object containing the last event that the user client has triggered.",
+            "defaultValue": null
+          },
+          "last_utterance": {
+            "isSystem": true,
+            "description": "The user's last utterance in a text string.",
+            "defaultValue": null
+          },
+          "vf_memory": {
+            "isSystem": true,
+            "description": "Last 10 user inputs and agent responses in a string (e.g. \"agent: How can i help?\"\nuser: What's the weather today?).",
+            "defaultValue": null
+          },
+          "location": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          },
+          "property_type": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          },
+          "budget": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          },
+          "timeframe": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          },
+          "ai_response": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          },
+          "Bot_response": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          },
+          "URL": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          }
+        },
+        "cmsEntities": {}
+      },
+      "settings": {},
+      "platform": "webchat"
+    },
+    "settings": {
+      "memory": {
+        "turns": 25
+      },
+      "intentClassification": {
+        "type": "rag",
+        "params": {
+          "model": "claude-3.5-haiku",
+          "temperature": 0.1
+        },
+        "promptWrapper": null
+      },
+      "voice": {
+        "failureMessage": "We’re sorry, but the call cannot be completed at this time. Please try again later.",
+        "hasCallRecording": false,
+        "tts": {
+          "provider": "elevenlabs",
+          "voice": "FGY2WhTYpPnrIDTdsKH5",
+          "model": "eleven_turbo_v2_5",
+          "settings": {}
+        }
+      },
+      "globalNoMatch": {
+        "type": "static",
+        "prompt": [
+          {
+            "text": [
+              "Sorry, I didn’t get that. Please try again."
+            ]
+          }
+        ]
+      }
+    },
+    "topics": [
+      {
+        "type": "DIAGRAM",
+        "sourceID": "64dbb6696a8fab0013dba194"
+      }
+    ],
+    "variables": [
+      "sessions",
+      "user_id",
+      "timestamp",
+      "platform",
+      "locale",
+      "intent_confidence",
+      "last_response",
+      "last_event",
+      "last_utterance",
+      "vf_memory",
+      "location",
+      "property_type",
+      "budget",
+      "timeframe",
+      "ai_response",
+      "Bot_response",
+      "URL"
+    ],
+    "_id": "684dbbbd2d4ddb7e92584d99",
+    "updatedAt": "2025-07-30T08:18:26.035Z",
+    "publishedAt": "2024-09-27T16:54:27.996Z",
+    "domains": [
+      {
+        "id": "cla06iyr900b206pkh8d4ap8n",
+        "name": "Home",
+        "live": true,
+        "topicIDs": [
+          "64dbb6696a8fab0013dba194"
+        ],
+        "rootDiagramID": "64dbb6696a8fab0013dba194",
+        "updatedBy": 1661508,
+        "updatedAt": "2025-06-14T18:13:17.480Z"
+      }
+    ],
+    "projectID": "684dbbbd2d4ddb7e92584d98",
+    "rootDiagramID": "64dbb6696a8fab0013dba194",
+    "templateDiagramID": "64dbb6696a8fab0013dba195"
+  },
+  "diagrams": {
+    "64dbb6696a8fab0013dba195": {
+      "name": "Template Diagram",
+      "type": "TEMPLATE",
+      "zoom": 100,
+      "nodes": {},
+      "offsetX": 0,
+      "offsetY": 0,
+      "modified": 1701833501,
+      "creatorID": 1661508,
+      "variables": [],
+      "menuItems": [],
+      "_id": "684dbbbd2d4ddb7e92584d9b",
+      "diagramID": "64dbb6696a8fab0013dba195",
+      "versionID": "684dbbbd2d4ddb7e92584d99"
+    },
+    "64dbb6696a8fab0013dba194": {
+      "name": "ROOT",
+      "type": "TOPIC",
+      "zoom": 80,
+      "nodes": {
+        "start00000000000000000000": {
+          "type": "start",
+          "data": {
+            "name": "Start",
+            "color": "#56b365",
+            "steps": [],
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": "684dbbeda3feda18b00e5313",
+                  "id": "6032afcf359e8c14c06c0319",
+                  "data": {}
+                }
+              },
+              "dynamic": []
+            },
+            "label": "Start"
+          },
+          "nodeID": "start00000000000000000000",
+          "coords": [
+            -351.6816735414138,
+            136.63119334963568
+          ]
+        },
+        "684dbbeda3feda18b00e5313": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "684dbbeda3feda18b00e5314"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            },
+            "messageID": "684dbbf02d4ddb7e92584dbe"
+          },
+          "nodeID": "684dbbeda3feda18b00e5313"
+        },
+        "684dbbeda3feda18b00e5315": {
+          "type": "block",
+          "data": {
+            "name": "New Block 1",
+            "steps": [
+              "684dbbeda3feda18b00e5313",
+              "684dbc99a3feda18b00e531c"
+            ]
+          },
+          "nodeID": "684dbbeda3feda18b00e5315",
+          "coords": [
+            -68.68727467752873,
+            -35.381340877522106
+          ]
+        },
+        "684dbc99a3feda18b00e531c": {
+          "type": "buttons-v2",
+          "data": {
+            "name": "Buttons",
+            "items": [
+              {
+                "id": "cmbwk6a8901he357tc78u16ux",
+                "label": [
+                  {
+                    "text": [
+                      "Sure"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "cmbwk6dxd01ho357tclxdark2",
+                "label": [
+                  {
+                    "text": [
+                      "No Thanks"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "listenForOtherTriggers": true,
+            "portsV2": {
+              "byKey": {
+                "cmbwk6a8901he357tc78u16ux": {
+                  "id": "684dbc9aa3feda18b00e531f",
+                  "target": "684dbcdca3feda18b00e5331",
+                  "type": "",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          97.31,
+                          160.87
+                        ]
+                      },
+                      {
+                        "point": [
+                          162.19,
+                          160.87
+                        ]
+                      },
+                      {
+                        "point": [
+                          162.19,
+                          -61.18
+                        ]
+                      },
+                      {
+                        "point": [
+                          227.08,
+                          -61.18
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                },
+                "cmbwk6dxd01ho357tclxdark2": {
+                  "id": "684dbc9fa3feda18b00e5321",
+                  "target": "684dbcb1a3feda18b00e5323",
+                  "type": "",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          97.31,
+                          215.12
+                        ]
+                      },
+                      {
+                        "point": [
+                          126.98,
+                          215.12
+                        ]
+                      },
+                      {
+                        "point": [
+                          126.98,
+                          350.73
+                        ]
+                      },
+                      {
+                        "point": [
+                          102.98,
+                          350.73
+                        ],
+                        "reversed": true,
+                        "allowedToTop": false
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684dbc99a3feda18b00e531c",
+          "coords": [
+            0,
+            0
+          ]
+        },
+        "684dbcb1a3feda18b00e5323": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "684dbcb1a3feda18b00e5324"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            },
+            "messageID": "684dbcb32d4ddb7e92584df5"
+          },
+          "nodeID": "684dbcb1a3feda18b00e5323"
+        },
+        "684dbcb1a3feda18b00e5325": {
+          "type": "block",
+          "data": {
+            "name": "New Block 2",
+            "steps": [
+              "684dbcb1a3feda18b00e5323",
+              "684dbcd4a3feda18b00e532c"
+            ]
+          },
+          "nodeID": "684dbcb1a3feda18b00e5325",
+          "coords": [
+            -63.018973739801936,
+            271.7334052679952
+          ]
+        },
+        "684dbcd4a3feda18b00e532c": {
+          "type": "exit",
+          "data": {
+            "name": "",
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684dbcd4a3feda18b00e532c"
+        },
+        "684dbcdca3feda18b00e532f": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "684dbcdd2d4ddb7e92584e0a",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "684dbcdca3feda18b00e5330"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684dbcdca3feda18b00e532f"
+        },
+        "684dbcdca3feda18b00e5331": {
+          "type": "block",
+          "data": {
+            "name": "New Block 3",
+            "steps": [
+              "684dbcdca3feda18b00e532f",
+              "684dbcf5a3feda18b00e5338"
+            ]
+          },
+          "nodeID": "684dbcdca3feda18b00e5331",
+          "coords": [
+            392.0757696784763,
+            -88.17607831476991
+          ]
+        },
+        "684dbcf5a3feda18b00e5338": {
+          "type": "capture-v3",
+          "data": {
+            "name": "Capture",
+            "capture": {
+              "type": "user-reply",
+              "variableID": "684dbd082d4ddb7e92584e44"
+            },
+            "listenForOtherTriggers": false,
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "684dbd11a3feda18b00e533e",
+                  "id": "684dbcf5a3feda18b00e5339",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          558.08,
+                          74.32
+                        ]
+                      },
+                      {
+                        "point": [
+                          584.52,
+                          74.32
+                        ]
+                      },
+                      {
+                        "point": [
+                          584.52,
+                          -31.52
+                        ]
+                      },
+                      {
+                        "point": [
+                          610.96,
+                          -31.52
+                        ],
+                        "allowedToTop": false
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684dbcf5a3feda18b00e5338"
+        },
+        "684dbd11a3feda18b00e533e": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "684dbd122d4ddb7e92584e53",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "684dbd11a3feda18b00e533f"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684dbd11a3feda18b00e533e"
+        },
+        "684dbd11a3feda18b00e5340": {
+          "type": "block",
+          "data": {
+            "name": "New Block 4",
+            "steps": [
+              "684dbd11a3feda18b00e533e",
+              "684dbd29a3feda18b00e5347"
+            ]
+          },
+          "nodeID": "684dbd11a3feda18b00e5340",
+          "coords": [
+            776.9592871563558,
+            -110.52482541071781
+          ]
+        },
+        "684dbd29a3feda18b00e5347": {
+          "type": "capture-v3",
+          "data": {
+            "name": "Capture",
+            "capture": {
+              "type": "user-reply",
+              "variableID": "684dbd3a2d4ddb7e92584e66"
+            },
+            "listenForOtherTriggers": false,
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "684dbd44a3feda18b00e534d",
+                  "id": "684dbd29a3feda18b00e5348",
+                  "data": {}
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684dbd29a3feda18b00e5347"
+        },
+        "684dbd44a3feda18b00e534d": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "684dbd452d4ddb7e92584e6d",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "684dbd44a3feda18b00e534e"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684dbd44a3feda18b00e534d"
+        },
+        "684dbd44a3feda18b00e534f": {
+          "type": "block",
+          "data": {
+            "name": "New Block 5",
+            "steps": [
+              "684dbd44a3feda18b00e534d",
+              "684dbd55a3feda18b00e5356"
+            ]
+          },
+          "nodeID": "684dbd44a3feda18b00e534f",
+          "coords": [
+            1225.4148035448789,
+            -150.29016763788474
+          ]
+        },
+        "684dbd55a3feda18b00e5356": {
+          "type": "capture-v3",
+          "data": {
+            "name": "Capture",
+            "capture": {
+              "type": "user-reply",
+              "variableID": "684dbd632d4ddb7e92584e7e"
+            },
+            "listenForOtherTriggers": false,
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "684dbd68a3feda18b00e535c",
+                  "id": "684dbd55a3feda18b00e5357",
+                  "data": {}
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684dbd55a3feda18b00e5356"
+        },
+        "684dbd68a3feda18b00e535c": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "684dbd692d4ddb7e92584e87",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "684dbd68a3feda18b00e535d"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684dbd68a3feda18b00e535c"
+        },
+        "684dbd68a3feda18b00e535e": {
+          "type": "block",
+          "data": {
+            "name": "New Block 6",
+            "steps": [
+              "684dbd68a3feda18b00e535c",
+              "684dbd79a3feda18b00e5365"
+            ]
+          },
+          "nodeID": "684dbd68a3feda18b00e535e",
+          "coords": [
+            1647.3600917819576,
+            -199.23212730209025
+          ]
+        },
+        "684dbd79a3feda18b00e5365": {
+          "type": "capture-v3",
+          "data": {
+            "name": "Capture",
+            "capture": {
+              "type": "user-reply",
+              "variableID": "684dbd862d4ddb7e92584e99"
+            },
+            "listenForOtherTriggers": false,
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "684dbe79a3feda18b00e5376",
+                  "id": "684dbd79a3feda18b00e5366",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          1813.36,
+                          -36.73
+                        ]
+                      },
+                      {
+                        "point": [
+                          1837.36,
+                          -36.73
+                        ]
+                      },
+                      {
+                        "point": [
+                          1837.36,
+                          -156.94
+                        ]
+                      },
+                      {
+                        "point": [
+                          1827.71,
+                          -156.94
+                        ]
+                      },
+                      {
+                        "point": [
+                          1827.71,
+                          -277.16
+                        ]
+                      },
+                      {
+                        "point": [
+                          1851.71,
+                          -277.16
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684dbd79a3feda18b00e5365"
+        },
+        "684dbd96a3feda18b00e536b": {
+          "type": "response-prompt",
+          "data": {
+            "name": "Untitled prompt",
+            "promptID": "684dbd9e5757a2a784d67765",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "684df1d3e80b12f8b0f768a9",
+                  "id": "684dbd96a3feda18b00e536c",
+                  "data": {}
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684dbd96a3feda18b00e536b"
+        },
+        "684dbd96a3feda18b00e536d": {
+          "type": "block",
+          "data": {
+            "name": "New Block 7",
+            "steps": [
+              "684dbd96a3feda18b00e536b"
+            ],
+            "color": ""
+          },
+          "nodeID": "684dbd96a3feda18b00e536d",
+          "coords": [
+            2417.65157886542,
+            -84.57280349041838
+          ]
+        },
+        "684dbe79a3feda18b00e5374": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "684dbe792d4ddb7e92584f09",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "684dbd96a3feda18b00e536b",
+                  "id": "684dbe79a3feda18b00e5375",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          2194.43,
+                          140.06
+                        ]
+                      },
+                      {
+                        "point": [
+                          2336.22,
+                          140.06
+                        ]
+                      },
+                      {
+                        "point": [
+                          2336.22,
+                          -102.25
+                        ]
+                      },
+                      {
+                        "point": [
+                          2312.22,
+                          -102.25
+                        ],
+                        "reversed": true,
+                        "allowedToTop": false
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684dbe79a3feda18b00e5374"
+        },
+        "684dbe79a3feda18b00e5376": {
+          "type": "block",
+          "data": {
+            "name": "New Block 8",
+            "steps": [
+              "684dbe79a3feda18b00e5374",
+              "684df4e0e80b12f8b0f768b3"
+            ],
+            "color": ""
+          },
+          "nodeID": "684dbe79a3feda18b00e5376",
+          "coords": [
+            2016.7083312067234,
+            -304.15523584363524
+          ]
+        },
+        "684df1d3e80b12f8b0f768a6": {
+          "type": "api-v2",
+          "data": {
+            "name": "",
+            "url": [
+              {
+                "text": [
+                  "https://api.airtable.com/v0/appwWfjF4oZHC735k/Table%201"
+                ]
+              }
+            ],
+            "headers": [
+              {
+                "id": "cmbwsfsmz00a4357nn2qjxg4d",
+                "key": "Content-Type",
+                "value": [
+                  {
+                    "text": [
+                      "application/json"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "cmbwseuff009s357nwvcr4rju",
+                "key": "Authorization",
+                "value": [
+                  {
+                    "text": [
+                      "Bearer patAp2DOsrQtp9glC.822b88ce309c379ecea758d0e7fab08afc4935f2950c0d7feaa2f758dc15acf1"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "httpMethod": "post",
+            "queryParameters": [],
+            "responseMappings": [],
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "684df675e80b12f8b0f768c8",
+                  "id": "684df1d3e80b12f8b0f768a7",
+                  "data": {}
+                },
+                "fail": {
+                  "type": "fail",
+                  "target": null,
+                  "id": "684df1d3e80b12f8b0f768a8"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            },
+            "body": {
+              "type": "raw-input",
+              "contentType": "json",
+              "content": [
+                "{\n  \"records\": [\n    {\n      \"fields\": {\n        \"Location\": \"",
+                {
+                  "variableID": "684dbd082d4ddb7e92584e44"
+                },
+                "\",\n        \"Property type\": \"",
+                {
+                  "variableID": "684dbd3a2d4ddb7e92584e66"
+                },
+                "\",\n        \"Budget\": \"",
+                {
+                  "variableID": "684dbd632d4ddb7e92584e7e"
+                },
+                "\",\n        \"Timeframe\": \"",
+                {
+                  "variableID": "684dbd862d4ddb7e92584e99"
+                },
+                "\",\n        \"Bot response\": \"",
+                {
+                  "variableID": "684df503fe109ae814e80b9e"
+                },
+                "\"\n      }\n    }\n  ]\n}"
+              ]
+            }
+          },
+          "nodeID": "684df1d3e80b12f8b0f768a6"
+        },
+        "684df1d3e80b12f8b0f768a9": {
+          "type": "block",
+          "data": {
+            "name": "New Block 9",
+            "steps": [
+              "684df1d3e80b12f8b0f768a6"
+            ]
+          },
+          "nodeID": "684df1d3e80b12f8b0f768a9",
+          "coords": [
+            2830.8173191772166,
+            -16.292835390953496
+          ]
+        },
+        "684df4e0e80b12f8b0f768b3": {
+          "type": "set-v3",
+          "data": {
+            "name": "",
+            "items": [
+              {
+                "id": "cmbwsrcr400h1357n5c5uip71",
+                "type": "prompt",
+                "label": null,
+                "value": "684dbd9e5757a2a784d67765",
+                "variableID": "684df503fe109ae814e80b9e"
+              }
+            ],
+            "label": "",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "684dbd96a3feda18b00e536d",
+                  "id": "684df4e0e80b12f8b0f768b4",
+                  "data": {}
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684df4e0e80b12f8b0f768b3"
+        },
+        "684df675e80b12f8b0f768c8": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "684df676fe109ae814e80bf9",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "684df675e80b12f8b0f768c9"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684df675e80b12f8b0f768c8"
+        },
+        "684df675e80b12f8b0f768ca": {
+          "type": "block",
+          "data": {
+            "name": "New Block 10",
+            "steps": [
+              "684df675e80b12f8b0f768c8",
+              "684df690e80b12f8b0f768d1"
+            ]
+          },
+          "nodeID": "684df675e80b12f8b0f768ca",
+          "coords": [
+            3297.8173191772166,
+            -155.60533539095348
+          ]
+        },
+        "684df690e80b12f8b0f768d1": {
+          "type": "buttons-v2",
+          "data": {
+            "name": "Buttons",
+            "items": [
+              {
+                "id": "cmbwt0cm300uw357nwjmwizsd",
+                "label": [
+                  {
+                    "text": [
+                      "Yes"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "cmbwt0fvr00v6357ngkh46rsw",
+                "label": [
+                  {
+                    "text": [
+                      "No Thanks"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "listenForOtherTriggers": true,
+            "portsV2": {
+              "byKey": {
+                "cmbwt0cm300uw357nwjmwizsd": {
+                  "id": "684df692e80b12f8b0f768d4",
+                  "target": "684df793e80b12f8b0f768e6",
+                  "type": "",
+                  "data": {}
+                },
+                "cmbwt0fvr00v6357ngkh46rsw": {
+                  "id": "684df696e80b12f8b0f768d6",
+                  "target": "684df6c2e80b12f8b0f768d8",
+                  "type": "",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          3463.82,
+                          110.89
+                        ]
+                      },
+                      {
+                        "point": [
+                          3574.65,
+                          110.89
+                        ]
+                      },
+                      {
+                        "point": [
+                          3574.65,
+                          265.28
+                        ]
+                      },
+                      {
+                        "point": [
+                          3550.65,
+                          265.28
+                        ],
+                        "reversed": true,
+                        "allowedToTop": false
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684df690e80b12f8b0f768d1"
+        },
+        "684df6c2e80b12f8b0f768d8": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "684df6c3fe109ae814e80c23",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "684dbbeda3feda18b00e5313",
+                  "id": "684df6c2e80b12f8b0f768d9",
+                  "data": {}
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684df6c2e80b12f8b0f768d8"
+        },
+        "684df6c2e80b12f8b0f768da": {
+          "type": "block",
+          "data": {
+            "name": "New Block 11",
+            "steps": [
+              "684df6c2e80b12f8b0f768d8"
+            ]
+          },
+          "nodeID": "684df6c2e80b12f8b0f768da",
+          "coords": [
+            3384.648353708182,
+            186.28479713666724
+          ]
+        },
+        "684df793e80b12f8b0f768e4": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "684df794fe109ae814e80c47",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "684df793e80b12f8b0f768e5"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684df793e80b12f8b0f768e4"
+        },
+        "684df793e80b12f8b0f768e6": {
+          "type": "block",
+          "data": {
+            "name": "New Block 12",
+            "steps": [
+              "684df793e80b12f8b0f768e4",
+              "684df7d9e80b12f8b0f768ed"
+            ]
+          },
+          "nodeID": "684df793e80b12f8b0f768e6",
+          "coords": [
+            3772.062725322471,
+            -199.69384087752218
+          ]
+        },
+        "684df7d9e80b12f8b0f768ed": {
+          "type": "buttons-v2",
+          "data": {
+            "name": "Buttons",
+            "items": [
+              {
+                "id": "cmbwt7x4t017l357nb9tw7ybk",
+                "label": [
+                  {
+                    "text": [
+                      "Face to Face Meeting"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "cmbwt85le017v357ne7ftl8e7",
+                "label": [
+                  {
+                    "text": [
+                      "Quick Call"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "listenForOtherTriggers": true,
+            "portsV2": {
+              "byKey": {
+                "cmbwt7x4t017l357nb9tw7ybk": {
+                  "id": "684df7f3e80b12f8b0f768f8",
+                  "target": "684df825e80b12f8b0f768fc",
+                  "type": "",
+                  "data": {}
+                },
+                "cmbwt85le017v357ne7ftl8e7": {
+                  "id": "684df7fee80b12f8b0f768fa",
+                  "target": "684df844e80b12f8b0f76905",
+                  "type": "",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          3938.06,
+                          -6.19
+                        ]
+                      },
+                      {
+                        "point": [
+                          4018.94,
+                          -6.19
+                        ]
+                      },
+                      {
+                        "point": [
+                          4018.94,
+                          170.56
+                        ]
+                      },
+                      {
+                        "point": [
+                          4099.81,
+                          170.56
+                        ],
+                        "allowedToTop": false
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684df7d9e80b12f8b0f768ed"
+        },
+        "684df825e80b12f8b0f768fc": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "684df826fe109ae814e80c5c",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "684df863e80b12f8b0f7690e",
+                  "id": "684df825e80b12f8b0f768fd",
+                  "data": {}
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684df825e80b12f8b0f768fc"
+        },
+        "684df825e80b12f8b0f768fe": {
+          "type": "block",
+          "data": {
+            "name": "New Block 13",
+            "steps": [
+              "684df825e80b12f8b0f768fc"
+            ]
+          },
+          "nodeID": "684df825e80b12f8b0f768fe",
+          "coords": [
+            4260.812725322471,
+            -243.44384087752218
+          ]
+        },
+        "684df844e80b12f8b0f76905": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "684df845fe109ae814e80c66",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "684df88ae80b12f8b0f76919",
+                  "id": "684df844e80b12f8b0f76906",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          4431.81,
+                          170.56
+                        ]
+                      },
+                      {
+                        "point": [
+                          4521.31,
+                          170.56
+                        ]
+                      },
+                      {
+                        "point": [
+                          4521.31,
+                          236.37
+                        ]
+                      },
+                      {
+                        "point": [
+                          4610.81,
+                          236.37
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684df844e80b12f8b0f76905"
+        },
+        "684df844e80b12f8b0f76907": {
+          "type": "block",
+          "data": {
+            "name": "New Block 14",
+            "steps": [
+              "684df844e80b12f8b0f76905"
+            ]
+          },
+          "nodeID": "684df844e80b12f8b0f76907",
+          "coords": [
+            4265.812725322471,
+            91.55615912247782
+          ]
+        },
+        "684df863e80b12f8b0f7690e": {
+          "type": "set-v3",
+          "data": {
+            "name": "",
+            "items": [
+              {
+                "id": "cmbwtafa301bd357nspgb893w",
+                "type": "script",
+                "label": null,
+                "value": [
+                  "\"https://calendly.com/minionaxis006/face-to-face-meeting\""
+                ],
+                "variableID": "684df87cfe109ae814e80c7c"
+              }
+            ],
+            "label": "",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "684dfaa0e80b12f8b0f76923",
+                  "id": "684df863e80b12f8b0f7690f",
+                  "data": {}
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684df863e80b12f8b0f7690e"
+        },
+        "684df863e80b12f8b0f76910": {
+          "type": "block",
+          "data": {
+            "name": "New Block 15",
+            "steps": [
+              "684df863e80b12f8b0f7690e"
+            ]
+          },
+          "nodeID": "684df863e80b12f8b0f76910",
+          "coords": [
+            4764.562725322471,
+            -320.9438408775222
+          ]
+        },
+        "684df88ae80b12f8b0f76919": {
+          "type": "block",
+          "data": {
+            "name": "New Block 15",
+            "color": "",
+            "steps": [
+              "684df88ae80b12f8b0f7691b"
+            ]
+          },
+          "nodeID": "684df88ae80b12f8b0f76919",
+          "coords": [
+            4775.812725322471,
+            209.36865912247782
+          ]
+        },
+        "684df88ae80b12f8b0f7691b": {
+          "type": "set-v3",
+          "data": {
+            "name": "",
+            "items": [
+              {
+                "id": "cmbwtafa301bd357nspgb893w",
+                "type": "script",
+                "label": null,
+                "value": [
+                  "\"https://calendly.com/minionaxis006/quick-call\""
+                ],
+                "variableID": "684df87cfe109ae814e80c7c"
+              }
+            ],
+            "label": "",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "684dfb85e80b12f8b0f769f7",
+                  "id": "684df88ae80b12f8b0f7691c",
+                  "data": {}
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684df88ae80b12f8b0f7691b"
+        },
+        "684dfaa0e80b12f8b0f76923": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "684dfaa1fe109ae814e80cbe",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "684dfcd81a10a88229498bcd",
+                  "id": "684dfaa0e80b12f8b0f76924",
+                  "data": {}
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684dfaa0e80b12f8b0f76923"
+        },
+        "684dfaa0e80b12f8b0f76925": {
+          "type": "block",
+          "data": {
+            "name": "New Block 17",
+            "steps": [
+              "684dfaa0e80b12f8b0f76923"
+            ]
+          },
+          "nodeID": "684dfaa0e80b12f8b0f76925",
+          "coords": [
+            5322.337245578332,
+            -469.2667353338114
+          ]
+        },
+        "684dfb85e80b12f8b0f769f7": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "684dfb85fe109ae814e80cf5",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "684dfd291a10a88229498bd6",
+                  "id": "684dfb85e80b12f8b0f769f8",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          5488.63,
+                          650.81
+                        ]
+                      },
+                      {
+                        "point": [
+                          5699.7,
+                          650.81
+                        ]
+                      },
+                      {
+                        "point": [
+                          5699.7,
+                          333.78
+                        ]
+                      },
+                      {
+                        "point": [
+                          5910.78,
+                          333.78
+                        ],
+                        "allowedToTop": false
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684dfb85e80b12f8b0f769f7"
+        },
+        "684dfb85e80b12f8b0f769f9": {
+          "type": "block",
+          "data": {
+            "name": "New Block 18",
+            "steps": [
+              "684dfb85e80b12f8b0f769f7"
+            ]
+          },
+          "nodeID": "684dfb85e80b12f8b0f769f9",
+          "coords": [
+            5322.625092060209,
+            330.3068254337785
+          ]
+        },
+        "684dfcd81a10a88229498bcd": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "684dfcd8fe109ae814e80d7c",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "684dfd761a10a88229498bdf",
+                  "id": "684dfcd81a10a88229498bce",
+                  "data": {}
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684dfcd81a10a88229498bcd"
+        },
+        "684dfcd81a10a88229498bcf": {
+          "type": "block",
+          "data": {
+            "name": "New Block 19",
+            "steps": [
+              "684dfcd81a10a88229498bcd"
+            ]
+          },
+          "nodeID": "684dfcd81a10a88229498bcf",
+          "coords": [
+            6049.038245695847,
+            -509.07756557954536
+          ]
+        },
+        "684dfd291a10a88229498bd6": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "684dfd29fe109ae814e80d90",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "684dfdc61a10a88229498be8",
+                  "id": "684dfd291a10a88229498bd7",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          6242.78,
+                          351.28
+                        ]
+                      },
+                      {
+                        "point": [
+                          6373.07,
+                          351.28
+                        ]
+                      },
+                      {
+                        "point": [
+                          6373.07,
+                          25.45
+                        ]
+                      },
+                      {
+                        "point": [
+                          6503.36,
+                          25.45
+                        ],
+                        "allowedToTop": false
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684dfd291a10a88229498bd6"
+        },
+        "684dfd291a10a88229498bd8": {
+          "type": "block",
+          "data": {
+            "name": "New Block 20",
+            "steps": [
+              "684dfd291a10a88229498bd6"
+            ]
+          },
+          "nodeID": "684dfd291a10a88229498bd8",
+          "coords": [
+            6076.782910171278,
+            254.77821473108662
+          ]
+        },
+        "684dfd761a10a88229498bdf": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "684dfd76fe109ae814e80daa",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "684dbbeda3feda18b00e5313",
+                  "id": "684dfd761a10a88229498be0",
+                  "data": {}
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684dfd761a10a88229498bdf"
+        },
+        "684dfd761a10a88229498be1": {
+          "type": "block",
+          "data": {
+            "name": "New Block 21",
+            "steps": [
+              "684dfd761a10a88229498bdf"
+            ]
+          },
+          "nodeID": "684dfd761a10a88229498be1",
+          "coords": [
+            6685.376240924589,
+            -375.8006455774299
+          ]
+        },
+        "684dfdc61a10a88229498be8": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "684dfdc6fe109ae814e80db6",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "684dbc99a3feda18b00e531c",
+                  "id": "684dfdc61a10a88229498be9",
+                  "data": {}
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "684dfdc61a10a88229498be8"
+        },
+        "684dfdc61a10a88229498bea": {
+          "type": "block",
+          "data": {
+            "name": "New Block 22",
+            "steps": [
+              "684dfdc61a10a88229498be8"
+            ]
+          },
+          "nodeID": "684dfdc61a10a88229498bea",
+          "coords": [
+            6669.358334653056,
+            -53.548988258882076
+          ]
+        }
+      },
+      "offsetX": 596.8151789918415,
+      "offsetY": -44.18672421439615,
+      "modified": 1701833501,
+      "creatorID": 1661508,
+      "variables": [],
+      "menuItems": [
+        {
+          "type": "NODE",
+          "sourceID": "start00000000000000000000"
+        }
+      ],
+      "menuNodeIDs": [],
+      "intentStepIDs": [],
+      "_id": "684dbbbd2d4ddb7e92584d9c",
+      "diagramID": "64dbb6696a8fab0013dba194",
+      "versionID": "684dbbbd2d4ddb7e92584d99"
+    }
+  },
+  "flows": [],
+  "entities": [],
+  "entityVariants": [],
+  "intents": [
+    {
+      "id": "None",
+      "name": "None",
+      "createdByID": 1661508,
+      "folderID": null,
+      "description": null,
+      "automaticReprompt": false,
+      "entityOrder": [],
+      "automaticRepromptSettings": null,
+      "createdAt": "2025-06-14T18:13:17.000Z",
+      "updatedAt": "2025-06-14T18:13:17.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedd9f",
+      "name": "No",
+      "createdByID": 1661508,
+      "folderID": null,
+      "description": "Trigger this intent then the user responds negatively",
+      "automaticReprompt": false,
+      "entityOrder": [],
+      "automaticRepromptSettings": null,
+      "createdAt": "2025-06-14T18:13:17.000Z",
+      "updatedAt": "2025-06-14T18:13:17.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd1",
+      "name": "Yes",
+      "createdByID": 1661508,
+      "folderID": null,
+      "description": "Trigger this intent when the user responds positively.",
+      "automaticReprompt": false,
+      "entityOrder": [],
+      "automaticRepromptSettings": null,
+      "createdAt": "2025-06-14T18:13:17.000Z",
+      "updatedAt": "2025-06-14T18:13:17.000Z",
+      "updatedByID": 1661508
+    }
+  ],
+  "utterances": [
+    {
+      "id": "6797c2110cfd6c00ccbedda0",
+      "text": [
+        {
+          "text": [
+            "I'm good"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda1",
+      "text": [
+        {
+          "text": [
+            "Nope"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda2",
+      "text": [
+        {
+          "text": [
+            "I think I'm good thanks"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda3",
+      "text": [
+        {
+          "text": [
+            "Definitely not"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda4",
+      "text": [
+        {
+          "text": [
+            "Nope"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda5",
+      "text": [
+        {
+          "text": [
+            "Under no circumstances"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda6",
+      "text": [
+        {
+          "text": [
+            "Not at all"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda7",
+      "text": [
+        {
+          "text": [
+            "Nope, not at all"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda8",
+      "text": [
+        {
+          "text": [
+            "No way"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda9",
+      "text": [
+        {
+          "text": [
+            "By no means"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddaa",
+      "text": [
+        {
+          "text": [
+            "Not in the slightest"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddab",
+      "text": [
+        {
+          "text": [
+            "No chance"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddac",
+      "text": [
+        {
+          "text": [
+            "Absolutely not"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddad",
+      "text": [
+        {
+          "text": [
+            "Not at all"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddae",
+      "text": [
+        {
+          "text": [
+            "Negative"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddaf",
+      "text": [
+        {
+          "text": [
+            "Sorry, no"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddb0",
+      "text": [
+        {
+          "text": [
+            "Definitely not"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddb1",
+      "text": [
+        {
+          "text": [
+            "That's wrong"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddb2",
+      "text": [
+        {
+          "text": [
+            "Incorrect"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddb3",
+      "text": [
+        {
+          "text": [
+            "Nope"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddb4",
+      "text": [
+        {
+          "text": [
+            "No"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd2",
+      "text": [
+        {
+          "text": [
+            "Definitely"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd3",
+      "text": [
+        {
+          "text": [
+            "Indeed"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd4",
+      "text": [
+        {
+          "text": [
+            "Of course"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd5",
+      "text": [
+        {
+          "text": [
+            "Certainly"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd6",
+      "text": [
+        {
+          "text": [
+            "Without question"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd7",
+      "text": [
+        {
+          "text": [
+            "Sure"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd8",
+      "text": [
+        {
+          "text": [
+            "Definitely"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd9",
+      "text": [
+        {
+          "text": [
+            "You bet"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddda",
+      "text": [
+        {
+          "text": [
+            "Without a doubt"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbedddb",
+      "text": [
+        {
+          "text": [
+            "By all means"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbedddc",
+      "text": [
+        {
+          "text": [
+            "Agreed"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbedddd",
+      "text": [
+        {
+          "text": [
+            "Absolutely"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddde",
+      "text": [
+        {
+          "text": [
+            "That's correct"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbedddf",
+      "text": [
+        {
+          "text": [
+            "Indeed"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbedde0",
+      "text": [
+        {
+          "text": [
+            "Affirmative"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbedde1",
+      "text": [
+        {
+          "text": [
+            "You are right"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c3060cfd6c00ccbede5c",
+      "text": [
+        {
+          "text": [
+            "Correct"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c3080cfd6c00ccbede5d",
+      "text": [
+        {
+          "text": [
+            "Yep"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    },
+    {
+      "id": "6797c3090cfd6c00ccbede5e",
+      "text": [
+        {
+          "text": [
+            "Yes"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-06-14T18:13:17.000Z"
+    }
+  ],
+  "requiredEntities": [],
+  "folders": [],
+  "responses": [
+    {
+      "id": "684dbbf02d4ddb7e92584dbe",
+      "name": "",
+      "createdByID": 1661508,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-06-14T18:14:08.000Z",
+      "updatedAt": "2025-06-14T18:16:55.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684dbcb32d4ddb7e92584df5",
+      "name": "",
+      "createdByID": 1661508,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-06-14T18:17:24.000Z",
+      "updatedAt": "2025-06-14T18:17:46.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684dbcdd2d4ddb7e92584e0a",
+      "name": "",
+      "createdByID": 1661508,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-06-14T18:18:05.000Z",
+      "updatedAt": "2025-06-14T18:18:27.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684dbd122d4ddb7e92584e53",
+      "name": "",
+      "createdByID": 1661508,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-06-14T18:18:58.000Z",
+      "updatedAt": "2025-06-14T18:19:19.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684dbd452d4ddb7e92584e6d",
+      "name": "",
+      "createdByID": 1661508,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-06-14T18:19:49.000Z",
+      "updatedAt": "2025-06-14T18:20:03.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684dbd692d4ddb7e92584e87",
+      "name": "",
+      "createdByID": 1661508,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-06-14T18:20:25.000Z",
+      "updatedAt": "2025-06-14T18:20:40.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684dbe792d4ddb7e92584f09",
+      "name": "",
+      "createdByID": 1661508,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-06-14T18:24:58.000Z",
+      "updatedAt": "2025-06-14T18:25:15.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684df676fe109ae814e80bf9",
+      "name": "",
+      "createdByID": 1661508,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-06-14T22:23:51.000Z",
+      "updatedAt": "2025-06-14T22:23:56.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684df6c3fe109ae814e80c23",
+      "name": "",
+      "createdByID": 1661508,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-06-14T22:25:08.000Z",
+      "updatedAt": "2025-06-14T22:25:57.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684df794fe109ae814e80c47",
+      "name": "",
+      "createdByID": 1661508,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-06-14T22:28:36.000Z",
+      "updatedAt": "2025-06-14T22:29:42.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684df826fe109ae814e80c5c",
+      "name": "",
+      "createdByID": 1661508,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-06-14T22:31:02.000Z",
+      "updatedAt": "2025-06-14T22:31:24.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684df845fe109ae814e80c66",
+      "name": "",
+      "createdByID": 1661508,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-06-14T22:31:34.000Z",
+      "updatedAt": "2025-06-14T22:31:47.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684dfaa1fe109ae814e80cbe",
+      "name": "",
+      "createdByID": 1661508,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-06-14T22:41:37.000Z",
+      "updatedAt": "2025-06-14T22:45:17.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684dfb85fe109ae814e80cf5",
+      "name": "",
+      "createdByID": 1661508,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-06-14T22:45:26.000Z",
+      "updatedAt": "2025-06-14T22:45:36.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684dfbe6fe109ae814e80d51",
+      "name": "",
+      "createdByID": 1661508,
+      "folderID": null,
+      "type": "message",
+      "draft": true,
+      "createdAt": "2025-06-14T22:47:02.000Z",
+      "updatedAt": "2025-06-14T22:47:02.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684dfcd8fe109ae814e80d7c",
+      "name": "",
+      "createdByID": 1661508,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-06-14T22:51:05.000Z",
+      "updatedAt": "2025-06-14T22:52:16.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684dfd29fe109ae814e80d90",
+      "name": "",
+      "createdByID": 1661508,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-06-14T22:52:26.000Z",
+      "updatedAt": "2025-06-14T22:52:51.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684dfd76fe109ae814e80daa",
+      "name": "",
+      "createdByID": 1661508,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-06-14T22:53:43.000Z",
+      "updatedAt": "2025-06-14T22:54:56.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684dfdc6fe109ae814e80db6",
+      "name": "",
+      "createdByID": 1661508,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-06-14T22:55:03.000Z",
+      "updatedAt": "2025-06-14T22:55:07.000Z",
+      "updatedByID": 1661508
+    }
+  ],
+  "responseMessages": [
+    {
+      "id": "684dbbf02d4ddb7e92584dc0",
+      "discriminatorID": "684dbbf02d4ddb7e92584dbf",
+      "text": [
+        {
+          "text": [
+            "👋 Market Analysis Bot can help you get a real estate market analysis report for your desired area. Are you ready?\r\n"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T18:14:08.000Z"
+    },
+    {
+      "id": "684dbcb32d4ddb7e92584df7",
+      "discriminatorID": "684dbcb32d4ddb7e92584df6",
+      "text": [
+        {
+          "text": [
+            "Thank You for contacting. Stay Happy"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T18:17:24.000Z"
+    },
+    {
+      "id": "684dbcdd2d4ddb7e92584e0c",
+      "discriminatorID": "684dbcdd2d4ddb7e92584e0b",
+      "text": [
+        {
+          "text": [
+            "Please enter the area or city you want a market report for.\r"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T18:18:05.000Z"
+    },
+    {
+      "id": "684df794fe109ae814e80c49",
+      "discriminatorID": "684df794fe109ae814e80c48",
+      "text": [
+        {
+          "text": [
+            "what would you like? Choose."
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T22:28:36.000Z"
+    },
+    {
+      "id": "684df826fe109ae814e80c5e",
+      "discriminatorID": "684df826fe109ae814e80c5d",
+      "text": [
+        {
+          "text": [
+            "Setup face to face meeting time by yourself."
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T22:31:02.000Z"
+    },
+    {
+      "id": "684df845fe109ae814e80c68",
+      "discriminatorID": "684df845fe109ae814e80c67",
+      "text": [
+        {
+          "text": [
+            "Setup quick call time by yourself."
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T22:31:34.000Z"
+    },
+    {
+      "id": "684df676fe109ae814e80bfb",
+      "discriminatorID": "684df676fe109ae814e80bfa",
+      "text": [
+        {
+          "text": [
+            "Would you like to schedule a quick call with our agent to discuss this market?\r\n"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T22:23:51.000Z"
+    },
+    {
+      "id": "684df681fe109ae814e80bff",
+      "discriminatorID": "684df676fe109ae814e80bfa",
+      "text": [
+        {
+          "text": [
+            "Do you want to set up a brief chat with our representative to talk about this market?"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T22:24:01.000Z"
+    },
+    {
+      "id": "684df681fe109ae814e80c00",
+      "discriminatorID": "684df676fe109ae814e80bfa",
+      "text": [
+        {
+          "text": [
+            "Are you interested in arranging a short call with our agent to go over this market?"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T22:24:01.000Z"
+    },
+    {
+      "id": "684df681fe109ae814e80c01",
+      "discriminatorID": "684df676fe109ae814e80bfa",
+      "text": [
+        {
+          "text": [
+            "Would you be open to scheduling a quick call with our representative to discuss this market?"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T22:24:01.000Z"
+    },
+    {
+      "id": "684df6c4fe109ae814e80c25",
+      "discriminatorID": "684df6c4fe109ae814e80c24",
+      "text": [
+        {
+          "text": [
+            "Thank You for contactig. If you need further assistance, tap sure to continue."
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T22:25:08.000Z"
+    },
+    {
+      "id": "684dfaa1fe109ae814e80cc0",
+      "discriminatorID": "684dfaa1fe109ae814e80cbf",
+      "text": [
+        {
+          "text": [
+            "<iframe width=\"100%\" height=\"500\" frameborder=\"0\" style=\"border.0\" title=\"Select a Date &amp; Time - Calendly\" src = \"",
+            {
+              "variableID": "684df87cfe109ae814e80c7c"
+            },
+            "  \" llowfullscreen></iframe>"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T22:41:37.000Z"
+    },
+    {
+      "id": "684dfbe6fe109ae814e80d53",
+      "discriminatorID": "684dfbe6fe109ae814e80d52",
+      "text": [
+        {
+          "text": [
+            ""
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T22:47:02.000Z"
+    },
+    {
+      "id": "684dfb85fe109ae814e80cf7",
+      "discriminatorID": "684dfb85fe109ae814e80cf6",
+      "text": [
+        {
+          "text": [
+            "<iframe width=\"100%\" height=\"500\" frameborder=\"0\" style=\"border.0\" title=\"Select a Date &amp; Time - Calendly\" src = \"",
+            {
+              "variableID": "684df87cfe109ae814e80c7c"
+            },
+            "  \" llowfullscreen></iframe>"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T22:45:26.000Z"
+    },
+    {
+      "id": "684dfcd8fe109ae814e80d7e",
+      "discriminatorID": "684dfcd8fe109ae814e80d7d",
+      "text": [
+        {
+          "text": [
+            "Now, as you have booked time for face to face meeting, wish you best of luck for the meeting."
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T22:51:05.000Z"
+    },
+    {
+      "id": "684dfd29fe109ae814e80d92",
+      "discriminatorID": "684dfd29fe109ae814e80d91",
+      "text": [
+        {
+          "text": [
+            "Now, as you have booked time for a quick call, wish you best of luck for the call."
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T22:52:26.000Z"
+    },
+    {
+      "id": "684dbd122d4ddb7e92584e55",
+      "discriminatorID": "684dbd122d4ddb7e92584e54",
+      "text": [
+        {
+          "text": [
+            "What type of property are you interested in?"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T18:18:58.000Z"
+    },
+    {
+      "id": "684dbd452d4ddb7e92584e6f",
+      "discriminatorID": "684dbd452d4ddb7e92584e6e",
+      "text": [
+        {
+          "text": [
+            "What’s your budget range?"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T18:19:49.000Z"
+    },
+    {
+      "id": "684dbd692d4ddb7e92584e89",
+      "discriminatorID": "684dbd692d4ddb7e92584e88",
+      "text": [
+        {
+          "text": [
+            "When are you planning to buy or invest?"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T18:20:25.000Z"
+    },
+    {
+      "id": "684dbe792d4ddb7e92584f0b",
+      "discriminatorID": "684dbe792d4ddb7e92584f0a",
+      "text": [
+        {
+          "text": [
+            "Here’s your personalized market report:\r\n\r"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T18:24:58.000Z"
+    },
+    {
+      "id": "684dfd76fe109ae814e80dac",
+      "discriminatorID": "684dfd76fe109ae814e80dab",
+      "text": [
+        {
+          "text": [
+            "If you need more assistance, you can tap on Sure button to continue otherwise, tap on No Thanks button to end the chat session."
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T22:53:43.000Z"
+    },
+    {
+      "id": "684dfdc6fe109ae814e80db8",
+      "discriminatorID": "684dfdc6fe109ae814e80db7",
+      "text": [
+        {
+          "text": [
+            "If you need more assistance, you can tap on Sure button to continue otherwise, tap on No Thanks button to end the chat session."
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-14T22:55:03.000Z"
+    }
+  ],
+  "responseDiscriminators": [
+    {
+      "id": "684dbbf02d4ddb7e92584dbf",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "684dbbf02d4ddb7e92584dbe",
+      "variantOrder": [
+        "684dbbf02d4ddb7e92584dc0"
+      ],
+      "createdAt": "2025-06-14T18:14:08.000Z"
+    },
+    {
+      "id": "684dbcb32d4ddb7e92584df6",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "684dbcb32d4ddb7e92584df5",
+      "variantOrder": [
+        "684dbcb32d4ddb7e92584df7"
+      ],
+      "createdAt": "2025-06-14T18:17:24.000Z"
+    },
+    {
+      "id": "684dbcdd2d4ddb7e92584e0b",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "684dbcdd2d4ddb7e92584e0a",
+      "variantOrder": [
+        "684dbcdd2d4ddb7e92584e0c"
+      ],
+      "createdAt": "2025-06-14T18:18:05.000Z"
+    },
+    {
+      "id": "684dbd122d4ddb7e92584e54",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "684dbd122d4ddb7e92584e53",
+      "variantOrder": [
+        "684dbd122d4ddb7e92584e55"
+      ],
+      "createdAt": "2025-06-14T18:18:58.000Z"
+    },
+    {
+      "id": "684dbd452d4ddb7e92584e6e",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "684dbd452d4ddb7e92584e6d",
+      "variantOrder": [
+        "684dbd452d4ddb7e92584e6f"
+      ],
+      "createdAt": "2025-06-14T18:19:49.000Z"
+    },
+    {
+      "id": "684dbd692d4ddb7e92584e88",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "684dbd692d4ddb7e92584e87",
+      "variantOrder": [
+        "684dbd692d4ddb7e92584e89"
+      ],
+      "createdAt": "2025-06-14T18:20:25.000Z"
+    },
+    {
+      "id": "684dbe792d4ddb7e92584f0a",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "684dbe792d4ddb7e92584f09",
+      "variantOrder": [
+        "684dbe792d4ddb7e92584f0b"
+      ],
+      "createdAt": "2025-06-14T18:24:58.000Z"
+    },
+    {
+      "id": "684df676fe109ae814e80bfa",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "684df676fe109ae814e80bf9",
+      "variantOrder": [
+        "684df676fe109ae814e80bfb",
+        "684df681fe109ae814e80bff",
+        "684df681fe109ae814e80c00",
+        "684df681fe109ae814e80c01"
+      ],
+      "createdAt": "2025-06-14T22:23:51.000Z"
+    },
+    {
+      "id": "684df6c4fe109ae814e80c24",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "684df6c3fe109ae814e80c23",
+      "variantOrder": [
+        "684df6c4fe109ae814e80c25"
+      ],
+      "createdAt": "2025-06-14T22:25:08.000Z"
+    },
+    {
+      "id": "684df794fe109ae814e80c48",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "684df794fe109ae814e80c47",
+      "variantOrder": [
+        "684df794fe109ae814e80c49"
+      ],
+      "createdAt": "2025-06-14T22:28:36.000Z"
+    },
+    {
+      "id": "684df826fe109ae814e80c5d",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "684df826fe109ae814e80c5c",
+      "variantOrder": [
+        "684df826fe109ae814e80c5e"
+      ],
+      "createdAt": "2025-06-14T22:31:02.000Z"
+    },
+    {
+      "id": "684df845fe109ae814e80c67",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "684df845fe109ae814e80c66",
+      "variantOrder": [
+        "684df845fe109ae814e80c68"
+      ],
+      "createdAt": "2025-06-14T22:31:34.000Z"
+    },
+    {
+      "id": "684dfaa1fe109ae814e80cbf",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "684dfaa1fe109ae814e80cbe",
+      "variantOrder": [
+        "684dfaa1fe109ae814e80cc0"
+      ],
+      "createdAt": "2025-06-14T22:41:37.000Z"
+    },
+    {
+      "id": "684dfb85fe109ae814e80cf6",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "684dfb85fe109ae814e80cf5",
+      "variantOrder": [
+        "684dfb85fe109ae814e80cf7"
+      ],
+      "createdAt": "2025-06-14T22:45:26.000Z"
+    },
+    {
+      "id": "684dfbe6fe109ae814e80d52",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "684dfbe6fe109ae814e80d51",
+      "variantOrder": [
+        "684dfbe6fe109ae814e80d53"
+      ],
+      "createdAt": "2025-06-14T22:47:02.000Z"
+    },
+    {
+      "id": "684dfcd8fe109ae814e80d7d",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "684dfcd8fe109ae814e80d7c",
+      "variantOrder": [
+        "684dfcd8fe109ae814e80d7e"
+      ],
+      "createdAt": "2025-06-14T22:51:05.000Z"
+    },
+    {
+      "id": "684dfd29fe109ae814e80d91",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "684dfd29fe109ae814e80d90",
+      "variantOrder": [
+        "684dfd29fe109ae814e80d92"
+      ],
+      "createdAt": "2025-06-14T22:52:26.000Z"
+    },
+    {
+      "id": "684dfd76fe109ae814e80dab",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "684dfd76fe109ae814e80daa",
+      "variantOrder": [
+        "684dfd76fe109ae814e80dac"
+      ],
+      "createdAt": "2025-06-14T22:53:43.000Z"
+    },
+    {
+      "id": "684dfdc6fe109ae814e80db7",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "684dfdc6fe109ae814e80db6",
+      "variantOrder": [
+        "684dfdc6fe109ae814e80db8"
+      ],
+      "createdAt": "2025-06-14T22:55:03.000Z"
+    }
+  ],
+  "variables": [
+    {
+      "id": "sessions",
+      "name": "sessions",
+      "createdByID": 1661508,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "number",
+      "description": "The number of times a particular user has opened the app.",
+      "defaultValue": null,
+      "createdAt": "2025-06-14T18:13:17.000Z",
+      "updatedAt": "2025-06-14T18:13:17.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "user_id",
+      "name": "user_id",
+      "createdByID": 1661508,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The user's unique ID.",
+      "defaultValue": null,
+      "createdAt": "2025-06-14T18:13:17.000Z",
+      "updatedAt": "2025-06-14T18:13:17.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "timestamp",
+      "name": "timestamp",
+      "createdByID": 1661508,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "UNIX timestamp (number of seconds since January 1st, 1970 at UTC).",
+      "defaultValue": null,
+      "createdAt": "2025-06-14T18:13:17.000Z",
+      "updatedAt": "2025-06-14T18:13:17.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "platform",
+      "name": "platform",
+      "createdByID": 1661508,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The platform your agent is running on (e.g. \"voiceflow\").",
+      "defaultValue": null,
+      "createdAt": "2025-06-14T18:13:17.000Z",
+      "updatedAt": "2025-06-14T18:13:17.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "locale",
+      "name": "locale",
+      "createdByID": 1661508,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The locale of the user (eg. en-US, en-CA, it-IT, fr-FR, ...).",
+      "defaultValue": null,
+      "createdAt": "2025-06-14T18:13:17.000Z",
+      "updatedAt": "2025-06-14T18:13:17.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "intent_confidence",
+      "name": "intent_confidence",
+      "createdByID": 1661508,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "number",
+      "description": "The confidence interval (measured as a value from 0 to 100) for the most recently matched intent.",
+      "defaultValue": null,
+      "createdAt": "2025-06-14T18:13:17.000Z",
+      "updatedAt": "2025-06-14T18:13:17.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "last_response",
+      "name": "last_response",
+      "createdByID": 1661508,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The agent's last response (text/speak) in a string.",
+      "defaultValue": null,
+      "createdAt": "2025-06-14T18:13:17.000Z",
+      "updatedAt": "2025-06-14T18:13:17.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "last_event",
+      "name": "last_event",
+      "createdByID": 1661508,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "any",
+      "description": "The object containing the last event that the user client has triggered.",
+      "defaultValue": null,
+      "createdAt": "2025-06-14T18:13:17.000Z",
+      "updatedAt": "2025-06-14T18:13:17.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "last_utterance",
+      "name": "last_utterance",
+      "createdByID": 1661508,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The user's last utterance in a text string.",
+      "defaultValue": null,
+      "createdAt": "2025-06-14T18:13:17.000Z",
+      "updatedAt": "2025-06-14T18:13:17.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "vf_memory",
+      "name": "vf_memory",
+      "createdByID": 1661508,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "Last 10 user inputs and agent responses in a string (e.g. \"agent: How can i help?\"\nuser: What's the weather today?).",
+      "defaultValue": null,
+      "createdAt": "2025-06-14T18:13:17.000Z",
+      "updatedAt": "2025-06-14T18:13:17.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684dbd082d4ddb7e92584e44",
+      "name": "location",
+      "createdByID": 1661508,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-06-14T18:18:49.000Z",
+      "updatedAt": "2025-06-14T18:18:49.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684dbd3a2d4ddb7e92584e66",
+      "name": "property_type",
+      "createdByID": 1661508,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-06-14T18:19:39.000Z",
+      "updatedAt": "2025-06-14T18:19:39.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684dbd632d4ddb7e92584e7e",
+      "name": "budget",
+      "createdByID": 1661508,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-06-14T18:20:19.000Z",
+      "updatedAt": "2025-06-14T18:20:19.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684dbd862d4ddb7e92584e99",
+      "name": "timeframe",
+      "createdByID": 1661508,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-06-14T18:20:54.000Z",
+      "updatedAt": "2025-06-14T18:20:54.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684dbee82d4ddb7e92584f37",
+      "name": "ai_response",
+      "createdByID": 1661508,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-06-14T18:26:48.000Z",
+      "updatedAt": "2025-06-14T18:26:48.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684df503fe109ae814e80b9e",
+      "name": "Bot_response",
+      "createdByID": 1661508,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-06-14T22:17:39.000Z",
+      "updatedAt": "2025-06-14T22:17:39.000Z",
+      "updatedByID": 1661508
+    },
+    {
+      "id": "684df87cfe109ae814e80c7c",
+      "name": "URL",
+      "createdByID": 1661508,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-06-14T22:32:29.000Z",
+      "updatedAt": "2025-06-14T22:32:29.000Z",
+      "updatedByID": 1661508
+    }
+  ],
+  "workflows": [
+    {
+      "id": "66df755be937eb000784abb2",
+      "name": "Start workflow",
+      "createdByID": 1661508,
+      "folderID": null,
+      "status": null,
+      "isStart": true,
+      "diagramID": "64dbb6696a8fab0013dba194",
+      "assigneeID": null,
+      "description": "",
+      "createdAt": "2025-06-14T18:13:17.000Z",
+      "updatedAt": "2025-06-14T22:59:50.000Z",
+      "updatedByID": 1661508
+    }
+  ],
+  "attachments": [],
+  "cardButtons": [],
+  "prompts": [
+    {
+      "id": "684dbd9e5757a2a784d67765",
+      "name": "Market Analysis Bot",
+      "createdByID": 1661508,
+      "folderID": null,
+      "description": "",
+      "settings": {
+        "model": "gpt-4o-mini",
+        "useStructuredOutput": false
+      },
+      "messageOrder": [
+        "684dbd9e5757a2a784d67766",
+        "684dbe062d4ddb7e92584ed8",
+        "684dbd9e5757a2a784d67767"
+      ],
+      "createdAt": "2025-06-14T18:21:19.000Z",
+      "updatedAt": "2025-06-14T18:23:51.000Z",
+      "updatedByID": 1661508
+    }
+  ],
+  "promptMessages": [
+    {
+      "id": "684dbd9e5757a2a784d67766",
+      "promptID": "684dbd9e5757a2a784d67765",
+      "pairID": null,
+      "type": "role",
+      "data": {
+        "role": "system",
+        "content": [
+          {
+            "text": [
+              "You are a real estate market analyst. Your job is to provide a short, clear summary of the current market trends for a given area.\r\n\r\nYou will generate a 3–5 sentence market report based on the user's provided location and optional filters like property type, budget, or timeframe. If the area is popular, mention demand trends. If prices are rising or falling, include that.\r\n\r\nIf there's not enough detail, still generate a general overview using data from similar areas.\r\n\r\nBe professional, objective, and helpful.\r\n"
+            ]
+          }
+        ]
+      },
+      "createdAt": "2025-06-14T18:21:19.000Z"
+    },
+    {
+      "id": "684dbd9e5757a2a784d67767",
+      "promptID": "684dbd9e5757a2a784d67765",
+      "pairID": null,
+      "type": "role",
+      "data": {
+        "role": "user",
+        "content": [
+          {
+            "text": [
+              "Generate a real estate market analysis report for the following input:\r\n\r\nLocation: ",
+              {
+                "variableID": "684dbd082d4ddb7e92584e44"
+              },
+              "  \r\nProperty Type: ",
+              {
+                "variableID": "684dbd3a2d4ddb7e92584e66"
+              },
+              "  \r\nBudget: ",
+              {
+                "variableID": "684dbd632d4ddb7e92584e7e"
+              },
+              "  \r\nTimeframe: ",
+              {
+                "variableID": "684dbd862d4ddb7e92584e99"
+              },
+              "\r\n"
+            ]
+          }
+        ]
+      },
+      "createdAt": "2025-06-14T18:21:19.000Z"
+    },
+    {
+      "id": "684dbe062d4ddb7e92584ed8",
+      "promptID": "684dbd9e5757a2a784d67765",
+      "pairID": null,
+      "type": "variable",
+      "data": {
+        "role": "user",
+        "content": [
+          {
+            "text": [
+              {
+                "variableID": "vf_memory"
+              }
+            ]
+          }
+        ]
+      },
+      "createdAt": "2025-06-14T18:23:03.000Z"
+    }
+  ],
+  "events": [],
+  "agents": [
+    {
+      "id": "67db2b56cbe88befffef4623",
+      "name": "Customer support specialist",
+      "createdByID": 1661508,
+      "folderID": null,
+      "settings": {},
+      "description": "An agent template for resolving issues and ensuring customer satisfaction with technical skill and empathy.",
+      "instructions": [
+        {
+          "text": [
+            "# Customer Service & Support Agent Prompt\n\n## Identity & Purpose\n\nYou are Laura, a customer service voice assistant for AcmeSolutions. Your primary purpose is to help customers resolve issues with their products, answer questions about services, and ensure a satisfying support experience.\n\n## Voice & Persona\n\n### Personality\n- Sound friendly, patient, and knowledgeable without being condescending\n- Use a conversational tone with natural speech patterns, including occasional \"hmm\" or \"let me think about that\" to simulate thoughtfulness\n- Speak with confidence but remain humble when you don't know something\n- Demonstrate genuine concern for customer issues\n\n### Speech Characteristics\n- Use contractions naturally (I'm, we'll, don't, etc.)\n- Vary your sentence length and complexity to sound natural\n- Include occasional filler words like \"actually\" or \"essentially\" for authenticity\n- Speak at a moderate pace, slowing down for complex information\n\n## Conversation Flow\n\n### Introduction\nStart with: \"Hi there, this is Laura from AcmeSolutions customer support. How can I help you today?\"\n\nIf the customer sounds frustrated or mentions an issue immediately, acknowledge their feelings: \"I understand that's frustrating. I'm here to help get this sorted out for you.\"\n\n### Issue Identification\n1. Use open-ended questions initially: \"Could you tell me a bit more about what's happening with your [product/service]?\"\n2. Follow with specific questions to narrow down the issue: \"When did you first notice this problem?\" or \"Does this happen every time you use it?\"\n3. Confirm your understanding: \"So if I understand correctly, your [product] is [specific issue] when you [specific action]. Is that right?\"\n\n### Troubleshooting\n1. Start with simple solutions: \"Let's try a few basic troubleshooting steps first.\"\n2. Provide clear step-by-step instructions: \"First, I'd like you to... Next, could you...\"\n3. Check progress at each step: \"What are you seeing now on your screen?\"\n4. Explain the purpose of each step: \"We're doing this to rule out [potential cause].\"\n\n### Resolution\n1. For resolved issues: \"Great! I'm glad we were able to fix that issue. Is everything working as expected now?\"\n2. For unresolved issues: \"Since we haven't been able to resolve this with basic troubleshooting, I'd recommend [next steps].\"\n3. Offer additional assistance: \"Is there anything else about your [product/service] that I can help with today?\"\n\n### Closing\nEnd with: \"Thank you for contacting AcmeSolutions support. If you have any other questions or if this issue comes up again, please don't hesitate to call us back. Have a great day!\"\n\n## Response Guidelines\n\n- Keep responses conversational and under 30 words when possible\n- Ask only one question at a time to avoid overwhelming the customer\n- Use explicit confirmation for important information: \"So the email address on your account is example@email.com, is that correct?\"\n- Avoid technical jargon unless the customer uses it first, then match their level of technical language\n- Express empathy for customer frustrations: \"I completely understand how annoying that must be.\"\n\n## Scenario Handling\n\n### For Common Technical Issues\n1. Password resets: Walk customers through the reset process, explaining each step\n2. Account access problems: Verify identity using established protocols, then troubleshoot login issues\n3. Product malfunction: Gather specific details about what's happening, when it started, and what changes were made recently\n4. Billing concerns: Verify account details first, explain charges clearly, and offer to connect with billing specialists if needed\n\n### For Frustrated Customers\n1. Let them express their frustration without interruption\n2. Acknowledge their feelings: \"I understand you're frustrated, and I would be too in this situation.\"\n3. Take ownership: \"I'm going to personally help get this resolved for you.\"\n4. Focus on solutions rather than dwelling on the problem\n5. Provide clear timeframes for resolution\n\n### For Complex Issues\n1. Break down complex problems into manageable components\n2. Address each component individually\n3. Provide a clear explanation of the issue in simple terms\n4. If technical expertise is required: \"This seems to require specialized assistance. Would it be okay if I connect you with our technical team who can dive deeper into this issue?\"\n\n### For Feature/Information Requests\n1. Provide accurate, concise information about available features\n2. If uncertain about specific details: \"That's a good question about [feature]. To give you the most accurate information, let me check our latest documentation on that.\"\n3. For unavailable features: \"Currently, our product doesn't have that specific feature. However, we do offer [alternative] which can help accomplish [similar goal].\"\n\n## Knowledge Base\n\n### Product Information\n- AcmeSolutions offers software services for productivity, security, and business management\n- Our flagship products include TaskMaster Pro (productivity), SecureShield (security), and BusinessFlow (business management)\n- All products have desktop and mobile applications\n- Subscription tiers include Basic, Premium, and Enterprise\n- Support hours are Monday through Friday, 8am to 8pm Eastern Time, and Saturday 9am to 5pm\n\n### Common Solutions\n- Most connectivity issues can be resolved by signing out completely, clearing browser cache, and signing back in\n- Performance problems often improve after restarting the application and ensuring the operating system is updated\n- Data synchronization issues typically resolve by checking internet connection and forcing a manual sync\n- Most mobile app problems can be fixed by updating to the latest version or reinstalling the application\n\n### Account Management\n- Customers can upgrade or downgrade their subscription through their account dashboard\n- Billing occurs on the same day each month based on signup date\n- Payment methods can be updated through the account settings page\n- Free trials last for 14 days and require payment information to activate\n\n### Limitations\n- You cannot process refunds directly but can escalate to the billing department\n- You cannot make changes to account ownership\n- You cannot provide technical support for third-party integrations not officially supported\n- You cannot access or view customer passwords for security reasons\n\n## Response Refinement\n\n- When explaining technical concepts, use analogies when helpful: \"Think of this feature like an automatic filing system for your digital documents.\"\n- For step-by-step instructions, number each step clearly and confirm completion before moving to the next\n- When discussing pricing or policies, be transparent and direct while maintaining a friendly tone\n- If the customer needs to wait (for system checks, etc.), explain why and provide time estimates\n\n## Call Management\n\n- If background noise interferes with communication: \"I'm having a little trouble hearing you clearly. Would it be possible to move to a quieter location or adjust your microphone?\"\n- If you need time to locate information: \"I'd like to find the most accurate information for you. Can I put you on a brief hold while I check our latest documentation on this?\"\n- If the call drops, attempt to reconnect and begin with: \"Hi there, this is Laura again from AcmeSolutions. I apologize for the disconnection. Let's continue where we left off with [last topic].\"\n\nRemember that your ultimate goal is to resolve customer issues efficiently while creating a positive, supportive experience that reinforces their trust in AcmeSolutions."
+          ]
+        }
+      ],
+      "pathToolOrder": [],
+      "webSearchTool": null,
+      "knowledgeBaseTool": {
+        "enabled": true,
+        "description": "Triggered the knowledge base when you don't know the answer to a question."
+      },
+      "buttonTool": null,
+      "cardTool": null,
+      "carouselTool": null,
+      "createdAt": "2025-06-14T18:13:17.000Z",
+      "updatedAt": "2025-06-14T18:13:17.000Z",
+      "updatedByID": 1661508
+    }
+  ],
+  "agentAPITools": [],
+  "agentPathTools": [],
+  "agentFunctionTools": [],
+  "agentIntegrationTools": [],
+  "agentPathToolVariables": [],
+  "apiTools": [],
+  "apiToolInputVariables": [],
+  "integrationTools": [],
+  "functions": [],
+  "functionPaths": [],
+  "functionVariables": [],
+  "project": {
+    "type": "chat",
+    "name": "Market analysis Bot",
+    "image": "https://cm4-production-assets.s3.amazonaws.com/1729190521409-square-onyx-1024.jpg",
+    "teamID": "Brk819Bljl",
+    "members": [],
+    "platform": "webchat",
+    "_version": 1.2,
+    "linkType": "STRAIGHT",
+    "creatorID": 1661508,
+    "updatedBy": 1661508,
+    "platformData": {
+      "invocationName": "template project general"
+    },
+    "customThemes": [],
+    "aiAssistSettings": {
+      "aiPlayground": true
+    },
+    "privacy": "private",
+    "apiPrivacy": "public",
+    "_id": "684dbbbd2d4ddb7e92584d98",
+    "updatedAt": "2025-06-14T22:55:09.311Z",
+    "devVersion": "684dbbbd2d4ddb7e92584d99",
+    "liveVersion": "684dbbbd2d4ddb7e92584d9a"
+  },
+  "_version": "1.2",
+  "secrets": [],
+  "variableStates": [],
+  "transcriptEvaluations": []
+}
