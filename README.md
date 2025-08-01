@@ -43,4 +43,5 @@ This is my first AI automation bot built using **Voiceflow**, **Airtable**, and 
 ##👤 Author
 
 **Manan Khan Niazi**  
-[LinkedIn Profile](https://www.linkedin.com/in/manan-khan-niazi-841419304)
+[LinkedIn Profile](www.linkedin.com/in/
+manan-khan-841419304)
