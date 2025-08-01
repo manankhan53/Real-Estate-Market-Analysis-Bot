@@ -37,7 +37,7 @@ This is my first AI automation bot built using **Voiceflow**, **Airtable**, and 
 ## 📂 Files
 
 - `Market_analysis_Bot.vf` – Voiceflow design file
-- `/assets` – Images and media (optional)
+- `/assets` – Images and media
 
 ---
 
